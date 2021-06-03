@@ -1,0 +1,27 @@
+main{
+    background-color: $orange;
+    height: calc(100vh - 90px);
+    .back_image{
+        height: 100%;
+        filter: blur(80px);
+        animation: main_animation 1000ms ease-in-out;
+        // clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%);
+       
+    }
+    @keyframes main_animation {
+        0%{clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);}
+        100%{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+    }
+
+    .logo_blanco{
+        width: 30vw;
+        position: absolute;
+        top: 25vh;
+        right: 10%;
+        border-radius: 50%;
+        background-color: $orange;
+
+    }
+    
+
+}

@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 100;
+  -webkit-box-shadow: 0px -3px 10px 0px #000000;
+  box-shadow: 0px -3px 10px 0px #000000;
+}
+
+header .logo {
+  height: 70%;
+}
+
+header .logo:hover {
+  cursor: pointer;
+}
+
+header .iniciar_sesion {
+  height: 60%;
+  width: 200px;
+  font-size: 1.5rem;
+  background-color: #ff6600;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  color: white;
+}
+
+header .iniciar_sesion:hover {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px 0px #000000;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+
+main {
+  background-color: #ff6600;
+  height: calc(100vh - 90px);
+}
+
+main .back_image {
+  height: 100%;
+  -webkit-filter: blur(80px);
+          filter: blur(80px);
+  -webkit-animation: main_animation 1000ms ease-in-out;
+          animation: main_animation 1000ms ease-in-out;
+}
+
+@-webkit-keyframes main_animation {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes main_animation {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+main .logo_blanco {
+  width: 30vw;
+  position: absolute;
+  top: 25vh;
+  right: 10%;
+  border-radius: 50%;
+  background-color: #ff6600;
+}
+/*# sourceMappingURL=style.css.map */
