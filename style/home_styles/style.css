@@ -57,8 +57,8 @@ main {
 
 main .back_image {
   height: 100%;
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
+  -webkit-filter: blur(80px);
+          filter: blur(80px);
   -webkit-animation: main_animation 1000ms ease-in-out;
           animation: main_animation 1000ms ease-in-out;
 }
