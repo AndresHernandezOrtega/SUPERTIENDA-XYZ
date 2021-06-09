@@ -3,7 +3,7 @@ main{
     height: calc(100vh - 90px);
     .back_image{
         height: 100%;
-        filter: blur(80px);
+        filter: blur(1px);
         animation: main_animation 1000ms ease-in-out;
         // clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%);
        
