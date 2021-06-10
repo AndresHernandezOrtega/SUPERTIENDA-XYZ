@@ -15,7 +15,7 @@ if(isset($_GET)){
         echo json_encode($query);
 
     }else{
-        echo json_encode("{'uncorrect_credentials'}");
+        echo json_encode("uncorrect_credentials");
     }
 }
 
