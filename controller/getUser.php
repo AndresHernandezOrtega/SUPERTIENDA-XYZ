@@ -2,6 +2,7 @@
 
 require("database.php");
 
+// DEVUELVE UN USUARIO PARA EL LOGIN
 if(isset($_GET)){
 
     $user_email = $_GET["email"];

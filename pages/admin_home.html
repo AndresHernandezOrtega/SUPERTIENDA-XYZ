@@ -18,7 +18,7 @@
     
     <header>
 
-        <img src="../src/LOGO SOLO_BLANCO.png" alt="logo">
+        <img src="../src/LOGO SOLO_BLANCO.png" alt="logo" id="logo">
         <i class="fas fa-bars"></i>
     </header>
     <nav>
@@ -31,41 +31,9 @@
         </ul>
     </nav>
     <main class="home">
-        <form>
-            <h2>Registrar usuario</h2>
-            <input type="email" id="email" placeholder="Correo electronico" class="input_registro">
-            <input type="text" id="name" placeholder="Nombre" class="input_registro">
-            <input type="text" id="lastName" placeholder="Apellido" class="input_registro">
-            <input type="password" id="password" placeholder="Contraseña" class="input_registro">
-            <input type="password" id="conf_password" placeholder="Repetir contraseña" class="input_registro">
-            
-            <label for="role">Cargo</label>
-            <select id="role">
-                <option value="admin">Administrador</option>
-                <option value="seller">Vendedor</option>
-            </select>
-
-            <input type="submit" value="Registrar usuario">
-        </form>
-
-        <div class="registered_users" id="">
-
-            <div class="user">
-                <div class="user_info">
-
-                    <h2>Nombre Y Apellido</h2>
-                    <p>Correo@sdsadsa</p>
-                    <p>role</p>
-                </div>
-
-                <div class="buttons">
-                    <button class="button update_user"><i class="fas fa-pen-alt"></i></button>
-                    <button class="button delete_user"><i class="fas fa-user-minus"></i></button>
-                </div>
-            </div>
-     
-        </div>
+        
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/admin.js"></script>
     <script src="../js/users.js"></script>
 </body>

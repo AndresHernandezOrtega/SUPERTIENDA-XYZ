@@ -2,7 +2,7 @@ const getUser = async (email, password) => {
 
     try {
         
-        let res = await fetch(`../controller/users.php?email=${email}&password=${password}`,{
+        let res = await fetch(`../controller/getUser.php?email=${email}&password=${password}`,{
     
             method : "GET",
             headers : {

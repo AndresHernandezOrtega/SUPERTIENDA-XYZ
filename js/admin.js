@@ -1,5 +1,5 @@
 // GETE USER DATA FROM LOCAL STORAGE
-user_data = localStorage.getItem("user_data")
+const user_data = JSON.parse(localStorage.getItem("user_data"))
 
 if (!user_data) {
 
@@ -37,4 +37,23 @@ button.addEventListener("click", () => {
 
 })
 
+const backHome = () => {
 
+    document.querySelector("main").className = "home"
+    document.querySelector(".home").innerHTML = `
+            <h1>SISTEMA DE FACTURACION SUPERTIENDA XYZ</h1>
+            <p>Bienvenido ${user_data.name} ${user_data.lastName ? user_data.lastName : "" }</p>
+    `
+}
+const XYZ_logo = document.querySelector("#logo")
+XYZ_logo.addEventListener("click", () => {
+
+    backHome()
+})
+
+
+window.onload = () => {
+
+    backHome()
+
+}
