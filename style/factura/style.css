@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 98vh;
+}
+
+main {
+  padding: 3%;
+}
+
+main {
+  border: 3px solid #ff6600;
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main h2, main h3 {
+  color: #ff6600;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+main .client_info {
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+main p {
+  font-size: 1.2rem;
+}
+
+main table {
+  border-spacing: 5px;
+  border: 1;
+  border-collapse: collapse;
+  width: 70%;
+  margin: 20px 0;
+}
+
+main table th, main table tr {
+  text-align: center;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70%;
+}
+
+div .btn_imrpimir, div .btn_pdf {
+  min-height: 40px;
+  font-size: 1.2rem;
+  background-color: #ff6600;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  color: white;
+  width: 40%;
+  margin: 10px 0;
+}
+
+div .btn_imrpimir:hover, div .btn_pdf:hover {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px 0px #000000;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+/*# sourceMappingURL=style.css.map */

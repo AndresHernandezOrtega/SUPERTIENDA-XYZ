@@ -121,7 +121,7 @@ const renderUserBoard = () => {
                     </div>
 
                     <div class="buttons">
-                        <button class="button update_user"><i class="fas fa-pen-alt"></i></button>
+                        <button class="button update_user"><i class="fas fa-user-edit"></i></i></button>
                         <button class="button delete_user"><i class="fas fa-user-minus"></i></button>
                     </div>
 

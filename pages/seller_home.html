@@ -4,9 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" href="../style/seller_styles/style.css">
+    <link rel="shortcut icon" href="../src/favicon.png">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Cajeros | Supertienda XYZ</title>
 </head>
 <body>
+    <header>
+
+        <img src="../src/LOGO SOLO_BLANCO.png" alt="logo" id="logo">
+
+        <button class="exit_btn" onclick="window.location.href = './login.html'">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></button>
+    </header>
+    <main class="facturar">
+
+        <h2 class="seller_name">Cajero: </h2>
+        <div class="select_client">
+            <h3>Selecciona un cliente</h3>
+            
+            <div class="search">
+                <input type="text" id="search_client" placeholder="N° de identificación del cliente">
+                <button class="create_user">Registrar nuevo cliente <i class="fas fa-plus-circle"></i></button>
+            </div>
+
+            <div class="client_suggestions">
+                
+            </div>
+
+        </div>
+
+        <div class="clients_container"> 
+
+            <i class="fas fa-times"></i>
+            <form class="form_register">
     
+                <h2>Registrar Cliente</h2>
+                <input type="text" id="client_id" placeholder="Numero de identificación" class="input_registro">
+                <input type="text" id="client_name" placeholder="Nombres" class="input_registro">
+                <input type="text" id="client_lastName" placeholder="Apellidos" class="input_registro">
+                <input type="number" id="client_phone_number" placeholder="Numero de telefono" class="input_registro">
+                <input type="text" id="client_addres" placeholder="Direccion" class="input_registro">
+                
+                <input type="submit" value="Registrar Cliente" id="register_client_btn">
+    
+            </form>
+        </div>
+
+        <h2 class="titulo">SELECCIONA LOS PRODUCTOS A FACTURAR</h2>
+        <div class="add_prodcuts">
+
+            <input type="text" id="search_product" placeholder="Nombre del producto">
+            <div class="product_suggestions">
+
+            </div>
+        </div>
+
+        
+        <h2 class="titulo">PRODUCTOS A FACTURAR</h2>
+        <div class="added_products">
+
+        </div>
+
+        <div class="total_price">
+            <h2>Total: $</h2>
+            <p></p>
+        </div>
+        <button class="facturar_btn">FACTURAR</button>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/facturar.js"></script>
+    <script src="../js/productos_detail.js"></script>
 </body>
 </html>

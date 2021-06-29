@@ -1,0 +1,67 @@
+main{
+    border: 3px solid $orange;
+    margin: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    h2, h3{
+
+        color: $orange;
+        font-weight: 800;
+        margin: 10px 0;
+
+    }
+
+    .client_info{
+        border: 2px solid $orange;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+
+    table {
+        border-spacing: 5px;
+        border: 1;
+        border-collapse: collapse;
+        width: 70%;
+        margin: 20px 0;
+
+        th, tr{
+            text-align: center;
+        }
+    }
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+div{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    .btn_imrpimir, .btn_pdf{
+    
+        min-height: 40px;
+        font-size: 1.2rem;
+        background-color: $orange;
+        border-radius: 10px;
+        border: none;
+        font-weight: 800;
+        color: white;
+        width: 40%;
+        margin: 10px 0;
+    
+        &:hover{
+            transition: 200ms ease;
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 10px 0px #000000; 
+            box-shadow: 0px 0px 10px 0px #000000;
+        }
+    }
+}

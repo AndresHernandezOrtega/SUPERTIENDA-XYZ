@@ -1,5 +1,5 @@
 // GETE USER DATA FROM LOCAL STORAGE
-const user_data = JSON.parse(localStorage.getItem("user_data"))
+let user_data = JSON.parse(localStorage.getItem("user_data"))
 
 if (!user_data) {
 
@@ -9,7 +9,7 @@ if (!user_data) {
 // HEADER COMPORTAMIENTO
 const closeMenu = (button) => {
 
-    menu.style.top = "-300px"
+    menu.style.top = "-400px"
     button.className = "fas fa-bars"
 
 }
@@ -52,8 +52,15 @@ XYZ_logo.addEventListener("click", () => {
 })
 
 
+
+// CERRAR SESION
+const btn_exit = document.querySelector("nav ul #cerrar_sesion")
+btn_exit.addEventListener("click", () => window.location.href = "./login.html")
+
 window.onload = () => {
-
     backHome()
+}
 
+window.onclose = () => {
+    localStorage.removeItem("user_data")
 }

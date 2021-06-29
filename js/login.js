@@ -38,25 +38,25 @@ input_submit.addEventListener("click", async (e) => {
         userData = await getUser(email.value,password.value)
         console.log(typeof userData)
         
-        if (typeof userData === "string") {
+        if (typeof userData !== "object") {
             
             div_uncorrect_creds.style.display = "block"
 
-        }
+        }else{
 
-
-        localStorage.setItem("user_data", JSON.stringify(userData))
-
+            localStorage.setItem("user_data", JSON.stringify(userData))
+    
             if (userData.role === "admin") {
                 window.location.href = "admin_home.html"
         
             }else if(userData.role === "seller"){
                 window.location.href = "seller_home.html"
             }
-
-        
+        }
     }
-    
-
 })
 
+window.onload = () => {
+
+    localStorage.removeItem("user_data")
+}

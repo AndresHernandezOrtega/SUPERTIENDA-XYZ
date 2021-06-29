@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- STYLE SHEET -->
+        <link rel="stylesheet" href="../style/factura/style.css">
+        <link rel="shortcut icon" href="../src/favicon.png">
+    
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+        <title>Factura | Supertienda XYZ</title>
+    </head>
+<body class="factura">
+    
+    <main>
+
+        <h2 class="numero_fac">N° de factura: </h2>
+        <p class="fecha_creacion">Fecha de Registro: </p>
+
+        <h3 class="cajero">Registrado por: </h3>
+        <div class="client_info">
+
+            <p class="client_id">N° de identificación del cliente: </p>
+            <p class="client_name">Nombres: </p>
+            <p class="client_lastName">Apellidos: </p>
+            <p class="client_phone">Numero de telefono: </p>
+            <p class="client_addres">Domicilio: </p>
+            
+        </div>
+
+        <table class="detail" border="1">
+            <thead>
+                <th>Codigo</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio por Unidad</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <h3 class="valor_total"></h3>
+    </main>
+
+    <div>
+        <button class="btn_imrpimir">Imprimir Factura</button>
+        <button class="btn_pdf">Ver en PDF</button>
+    </div>
+    
+        <!-- El script de la librería-->
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/generarFactura.js"></script>
+</body>
+</html>

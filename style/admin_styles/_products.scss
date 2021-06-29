@@ -1,0 +1,210 @@
+.products{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 3%;
+
+
+    .register_product{
+
+        height: unset;
+        background-color: rgb(62, 121, 247);
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 20px;
+        width: 70%;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        border: none;
+        transition: 200ms ease-in;
+    
+        &:hover{
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 15px 1px blue; 
+            box-shadow: 0px 0px 15px 1px blue;
+            transition: 200ms ease-in;
+        }
+    }
+
+    label{
+        font-size: 2rem;
+        font-weight: 700;
+        color: $orange;
+    }
+
+    .search_prod{
+        margin: 20px 0 40px 0;
+        height: 40px;
+        font-size: 1.2rem;  
+        padding: 5px 20px;
+        border: 2px solid $orange;
+        border-radius: 5px;
+        
+        
+        
+        &::placeholder{
+            color: $orange;
+        }
+
+        &:focus{
+            -webkit-box-shadow: 0px 0px 15px 1px $orange; 
+            box-shadow: 0px 0px 15px 1px $orange;
+            transition: 200ms ease;
+            border: 3px solid $orange;
+
+        }
+    }
+
+    .product{
+        background-color: rgb(250, 207, 167);
+        padding: 15px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 15px 0;
+
+        &:hover{
+            -webkit-box-shadow: 0px 0px 15px 1px $orange; 
+            box-shadow: 0px 0px 15px 1px $orange;
+        }
+
+        h2,p{
+            margin: 3px 0;
+            color: rgb(58, 58, 58);
+        }
+
+        .button{
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(235, 145, 76);
+            font-size: 1rem;
+            color: rgb(48, 48, 48);
+
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.2);
+                transition: 200ms ease;
+            }
+        }
+        
+    }
+
+    h2{
+        color: $orange;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .all_products{
+        width: 100%;
+        margin: 30px 0;
+        padding: 10px;
+        border: 2px solid gray;
+        min-height: 40vh;
+        overflow-y: scroll;
+    }
+
+    // FORMULARIO DE CREAR PRODUCTO
+
+    .create_container,.update_product_container{
+
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: #000000a6;
+
+        justify-content: center;
+        align-items: center;
+
+        i{
+            color:  white;
+            font-size: 2rem;
+            position: absolute;
+            top: 40px;
+            right: 90px;
+
+            &:hover{
+                
+                cursor: pointer;
+                transform: scale(1.3);
+                transition: 200ms ease;
+            }
+        }
+        form{
+
+            background-color: white;
+            width: 50%;
+            display: flex;
+            flex-flow: column wrap;
+            padding: 10px;
+
+
+            label{
+
+                font-size: 0.9rem;
+            }
+            .input_registro{
+
+                height: 40px;
+                font-size: 1.2rem;  
+                padding: 5px 20px;
+                border: 2px solid $orange;
+                border-radius: 5px;
+                margin: 10px 0;
+                
+                
+                &::placeholder{
+                    color: $orange;
+                }
+    
+                &:focus{
+                    -webkit-box-shadow: 0px 0px 15px 1px $orange; 
+                    box-shadow: 0px 0px 15px 1px $orange;
+                    transition: 200ms ease;
+                    border: 3px solid $orange;
+    
+                }
+            
+            }
+            select{
+
+                height: 40px;
+                font-size: 1.2rem;  
+                padding: 5px 20px;
+                border: 2px solid $orange;
+                border-radius: 5px;
+                margin: 10px 0;
+                
+    
+                &:focus{
+                    -webkit-box-shadow: 0px 0px 15px 1px $orange; 
+                    box-shadow: 0px 0px 15px 1px $orange;
+                    transition: 200ms ease;
+                    border: 3px solid $orange;
+                }
+            }
+
+            input[type="submit"]{
+                height: 40px;
+                font-size: 1.2rem;  
+                padding: 5px 20px;
+                border: 2px solid $orange;
+                border-radius: 5px;
+                margin: 10px 0;
+            }
+    
+        }
+    }
+
+    
+    
+}

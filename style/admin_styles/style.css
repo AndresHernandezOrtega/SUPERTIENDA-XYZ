@@ -32,6 +32,16 @@ header {
 
 header img {
   width: 7%;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
+}
+
+header img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+  cursor: pointer;
 }
 
 header i {
@@ -52,7 +62,7 @@ header i:hover {
 
 nav {
   position: absolute;
-  top: -300px;
+  top: -4000px;
   width: 100vw;
   background-color: white;
   padding: 10px;
@@ -284,6 +294,13 @@ nav ul li:hover {
   color: gray;
 }
 
+.users .registered_users .user:hover {
+  -webkit-box-shadow: 0px 0px 12px -2px #000000;
+  box-shadow: 0px 0px 12px -2px #000000;
+  -webkit-transition: 50ms ease-out;
+  transition: 50ms ease-out;
+}
+
 .users .registered_users .user .button {
   width: 30px;
   height: 30px;
@@ -336,5 +353,678 @@ nav ul li:hover {
 .users .update_container .form_update {
   background-color: white;
   width: 50%;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 3%;
+}
+
+.products .register_product {
+  height: unset;
+  background-color: #3e79f7;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 20px;
+  width: 70%;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  border: none;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
+}
+
+.products .register_product:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 15px 1px blue;
+  box-shadow: 0px 0px 15px 1px blue;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
+}
+
+.products label {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6600;
+}
+
+.products .search_prod {
+  margin: 20px 0 40px 0;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+}
+
+.products .search_prod::-webkit-input-placeholder {
+  color: #ff6600;
+}
+
+.products .search_prod:-ms-input-placeholder {
+  color: #ff6600;
+}
+
+.products .search_prod::-ms-input-placeholder {
+  color: #ff6600;
+}
+
+.products .search_prod::placeholder {
+  color: #ff6600;
+}
+
+.products .search_prod:focus {
+  -webkit-box-shadow: 0px 0px 15px 1px #ff6600;
+  box-shadow: 0px 0px 15px 1px #ff6600;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  border: 3px solid #ff6600;
+}
+
+.products .product {
+  background-color: #facfa7;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.products .product:hover {
+  -webkit-box-shadow: 0px 0px 15px 1px #ff6600;
+  box-shadow: 0px 0px 15px 1px #ff6600;
+}
+
+.products .product h2, .products .product p {
+  margin: 3px 0;
+  color: #3a3a3a;
+}
+
+.products .product .button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #eb914c;
+  font-size: 1rem;
+  color: #303030;
+}
+
+.products .product .button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.products h2 {
+  color: #ff6600;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.products .all_products {
+  width: 100%;
+  margin: 30px 0;
+  padding: 10px;
+  border: 2px solid gray;
+  min-height: 40vh;
+  overflow-y: scroll;
+}
+
+.products .create_container, .products .update_product_container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #000000a6;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products .create_container i, .products .update_product_container i {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 90px;
+}
+
+.products .create_container i:hover, .products .update_product_container i:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.products .create_container form, .products .update_product_container form {
+  background-color: white;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 10px;
+}
+
+.products .create_container form label, .products .update_product_container form label {
+  font-size: 0.9rem;
+}
+
+.products .create_container form .input_registro, .products .update_product_container form .input_registro {
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.products .create_container form .input_registro::-webkit-input-placeholder, .products .update_product_container form .input_registro::-webkit-input-placeholder {
+  color: #ff6600;
+}
+
+.products .create_container form .input_registro:-ms-input-placeholder, .products .update_product_container form .input_registro:-ms-input-placeholder {
+  color: #ff6600;
+}
+
+.products .create_container form .input_registro::-ms-input-placeholder, .products .update_product_container form .input_registro::-ms-input-placeholder {
+  color: #ff6600;
+}
+
+.products .create_container form .input_registro::placeholder, .products .update_product_container form .input_registro::placeholder {
+  color: #ff6600;
+}
+
+.products .create_container form .input_registro:focus, .products .update_product_container form .input_registro:focus {
+  -webkit-box-shadow: 0px 0px 15px 1px #ff6600;
+  box-shadow: 0px 0px 15px 1px #ff6600;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  border: 3px solid #ff6600;
+}
+
+.products .create_container form select, .products .update_product_container form select {
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.products .create_container form select:focus, .products .update_product_container form select:focus {
+  -webkit-box-shadow: 0px 0px 15px 1px #ff6600;
+  box-shadow: 0px 0px 15px 1px #ff6600;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  border: 3px solid #ff6600;
+}
+
+.products .create_container form input[type="submit"], .products .update_product_container form input[type="submit"] {
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.suppliers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3%;
+}
+
+.suppliers form {
+  border: 2px solid gray;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 15px;
+  height: 70vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.suppliers form h2 {
+  color: #ff6600;
+}
+
+.suppliers form .input_registro {
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+}
+
+.suppliers form .input_registro::-webkit-input-placeholder {
+  color: #ff6600;
+}
+
+.suppliers form .input_registro:-ms-input-placeholder {
+  color: #ff6600;
+}
+
+.suppliers form .input_registro::-ms-input-placeholder {
+  color: #ff6600;
+}
+
+.suppliers form .input_registro::placeholder {
+  color: #ff6600;
+}
+
+.suppliers form .input_registro:focus {
+  -webkit-box-shadow: 0px 0px 15px 1px #ff6600;
+  box-shadow: 0px 0px 15px 1px #ff6600;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  border: 3px solid #ff6600;
+}
+
+.suppliers form label {
+  color: #ff6600;
+  font-weight: 700;
+}
+
+.suppliers form input[type="submit"] {
+  height: 40px;
+  font-size: 1.2rem;
+  background-color: #ff6600;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  color: white;
+}
+
+.suppliers form input[type="submit"]:hover {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px 0px #000000;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+
+.suppliers .registered_suppliers {
+  width: 55%;
+  height: 70vh;
+  border: 2px solid gray;
+  padding: 15px;
+  overflow: scroll;
+}
+
+.suppliers .registered_suppliers .supplier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f0c536;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #242424;
+}
+
+.suppliers .registered_suppliers .supplier h2 {
+  width: 80%;
+}
+
+.suppliers .registered_suppliers .supplier:hover {
+  -webkit-box-shadow: 0px 0px 12px -2px #000000;
+  box-shadow: 0px 0px 12px -2px #000000;
+  -webkit-transition: 50ms ease-out;
+  transition: 50ms ease-out;
+}
+
+.suppliers .registered_suppliers .supplier .button {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.suppliers .registered_suppliers .supplier .button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 100ms ease-in;
+  transition: 100ms ease-in;
+}
+
+.suppliers .update_suppliers_container {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000a6;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.suppliers .update_suppliers_container i {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 90px;
+}
+
+.suppliers .update_suppliers_container i:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.suppliers .update_suppliers_container .form_update {
+  background-color: white;
+  width: 50%;
+}
+
+.clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3%;
+}
+
+.clients form {
+  border: 2px solid gray;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 15px;
+  height: 70vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.clients form h2 {
+  color: #ff6600;
+}
+
+.clients form .input_registro {
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+}
+
+.clients form .input_registro::-webkit-input-placeholder {
+  color: #ff6600;
+}
+
+.clients form .input_registro:-ms-input-placeholder {
+  color: #ff6600;
+}
+
+.clients form .input_registro::-ms-input-placeholder {
+  color: #ff6600;
+}
+
+.clients form .input_registro::placeholder {
+  color: #ff6600;
+}
+
+.clients form .input_registro:focus {
+  -webkit-box-shadow: 0px 0px 15px 1px #ff6600;
+  box-shadow: 0px 0px 15px 1px #ff6600;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  border: 3px solid #ff6600;
+}
+
+.clients form label {
+  color: #ff6600;
+  font-weight: 700;
+}
+
+.clients form input[type="submit"] {
+  height: 40px;
+  font-size: 1.2rem;
+  background-color: #ff6600;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  color: white;
+}
+
+.clients form input[type="submit"]:hover {
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px 0px #000000;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+
+.clients .registered_clients {
+  width: 55%;
+  height: 70vh;
+  border: 2px solid gray;
+  padding: 15px;
+  overflow: scroll;
+}
+
+.clients .registered_clients .client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #27a547;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #242424;
+}
+
+.clients .registered_clients .client h2 {
+  width: 80%;
+}
+
+.clients .registered_clients .client:hover {
+  -webkit-box-shadow: 0px 0px 12px -2px #000000;
+  box-shadow: 0px 0px 12px -2px #000000;
+  -webkit-transition: 50ms ease-out;
+  transition: 50ms ease-out;
+}
+
+.clients .registered_clients .client .button {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.clients .registered_clients .client .button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 100ms ease-in;
+  transition: 100ms ease-in;
+}
+
+.clients .update_clients_container {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000a6;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients .update_clients_container i {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 90px;
+}
+
+.clients .update_clients_container i:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.clients .update_clients_container .form_update {
+  background-color: white;
+  width: 50%;
+}
+
+.orders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3%;
+}
+
+.orders .registered_orders {
+  width: 100%;
+  height: 70vh;
+  border: 2px solid gray;
+  padding: 15px;
+  overflow: scroll;
+}
+
+.orders .registered_orders .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #A6DEF9;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: gray;
+}
+
+.orders .registered_orders .order:hover {
+  -webkit-box-shadow: 0px 0px 12px -2px #000000;
+  box-shadow: 0px 0px 12px -2px #000000;
+  -webkit-transition: 50ms ease-out;
+  transition: 50ms ease-out;
+}
+
+.orders .registered_orders .order .button {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.orders .registered_orders .order .button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 100ms ease-in;
+  transition: 100ms ease-in;
 }
 /*# sourceMappingURL=style.css.map */
